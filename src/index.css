@@ -13,24 +13,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 120 15% 42%; /* Forest Green */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 22% 49%; /* Mountain Blue */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 30 22% 50%; /* Earthy Brown */
+    --muted-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 120 15% 92%;
+    --accent-foreground: 120 15% 42%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 120 15% 42%;
 
     --radius: 0.5rem;
 
@@ -96,6 +96,45 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    @apply font-medium tracking-tight;
+  }
+
+  /* Custom Classes */
+  .fade-in {
+    @apply opacity-0 animate-[fadeIn_0.5s_ease-out_forwards];
+  }
+
+  .slide-in {
+    @apply transform -translate-x-full animate-[slideIn_0.5s_ease-out_forwards];
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .section-padding {
+    @apply py-16 px-4 md:py-24 md:px-6 lg:px-8;
+  }
+
+  .trek-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply bg-adventure-500 hover:bg-adventure-600 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-mountain-500 hover:bg-mountain-600 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+
+  .btn-outline {
+    @apply border border-adventure-500 text-adventure-500 hover:bg-adventure-50 font-medium py-2 px-4 rounded-md transition-colors duration-200;
   }
 }
