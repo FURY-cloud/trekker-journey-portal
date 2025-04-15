@@ -1,9 +1,8 @@
-
 import MainLayout from '@/components/layout/MainLayout';
 import HeroSection from '@/components/ui/HeroSection';
 import SectionTitle from '@/components/ui/SectionTitle';
 import { Link } from 'react-router-dom';
-import { Camera, Image, Compass, Mountains, Sun } from 'lucide-react';
+import { Camera, Image, Compass, Mountain, Sun } from 'lucide-react';
 
 const PhotographyTours = () => {
   const tours = [
@@ -15,7 +14,7 @@ const PhotographyTours = () => {
       date: "June 20-28, 2025",
       duration: "9 Days / 8 Nights",
       description: "Capture the stark beauty of high-altitude deserts, ancient monasteries, and the vibrant culture of Ladakh.",
-      icon: Mountains
+      icon: Mountain
     },
     {
       id: "varanasi-ghats",
