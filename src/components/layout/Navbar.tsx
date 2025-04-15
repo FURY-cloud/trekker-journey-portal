@@ -40,6 +40,7 @@ const Navbar = () => {
         { name: 'Photography Tours', link: '/tours/photography' },
       ] 
     },
+    { name: 'Our Team', link: '/team' },
     { name: 'About Us', link: '/about' },
     { name: 'Contact', link: '/contact' },
   ];

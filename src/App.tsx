@@ -17,6 +17,16 @@ import PopularTreks from "./pages/treks/PopularTreks";
 import DayTreks from "./pages/treks/DayTreks";
 import MultiDayTreks from "./pages/treks/MultiDayTreks";
 
+// Import tour pages
+import CulturalTours from "./pages/tours/CulturalTours";
+import WildlifeTours from "./pages/tours/WildlifeTours";
+import PhotographyTours from "./pages/tours/PhotographyTours";
+
+// Import team pages
+import Team from "./pages/team/Team";
+import TeamMember from "./pages/team/TeamMember";
+import BlogPost from "./pages/team/BlogPost";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -37,6 +47,16 @@ const App = () => (
           <Route path="/treks/popular" element={<PopularTreks />} />
           <Route path="/treks/day" element={<DayTreks />} />
           <Route path="/treks/multi-day" element={<MultiDayTreks />} />
+          
+          {/* Tour routes */}
+          <Route path="/tours/cultural" element={<CulturalTours />} />
+          <Route path="/tours/wildlife" element={<WildlifeTours />} />
+          <Route path="/tours/photography" element={<PhotographyTours />} />
+          
+          {/* Team routes */}
+          <Route path="/team" element={<Team />} />
+          <Route path="/team/:id" element={<TeamMember />} />
+          <Route path="/team/:memberId/blog/:postId" element={<BlogPost />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
